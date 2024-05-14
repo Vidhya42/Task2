@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            width: 200px; 
+            height: 200px; 
+            background-color: white;
+            border: 1px solid black;
+            margin-top: 10px;
+        }
+
+        button{
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+    <p>Enter the color(red or green):</p>
+    <input type="text" id="color" placeholder="red or green"><br>
+    <button onclick="change()">Change</button>
+    <div id="container"> </div>
+    </center>
+    <script>
+        function change(){
+            var color=document.getElementById("color");
+            var con=document.getElementById("container");
+            var co=color.value
+            if(co.toLowerCase()=="red"){
+                con.style.backgroundColor="red";
+            }else if(co.toLowerCase()=="green"){
+                con.style.backgroundColor="green";
+            }else{
+                alert("Please enter red or green");
+            }
+        }
+    </script>
+</body>
+</html>
